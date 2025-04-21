@@ -227,7 +227,7 @@ class RCO_Comic:
 
         # Re module is used to extract relevant links.
         generic_page_link = re.compile(
-            r'(?<=&quot;)https://2.bp.blogspot.com/.+?(?=&quot;)', re.I)
+            r'(?<=")https://2.bp.blogspot.com/.+?(?=")', re.I)
         pages_links = re.findall(generic_page_link, raw_pages_links)
 
         return pages_links
